@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>PoE2 Market Slayer</title>
+</head>
+<body>
+    <header>
+        <p id="reminder">: <br> :</p>
+        <h2 id="profit_display"></h2>
+    </header>
+
+    <img src="bg.jpeg" class="img-bg" alt="Fond d'écran">
+
+    <form id="form1">
+        <div class="object_card" id="card1">
+            <label>Buying ratio</label>
+            <div class="inline">
+                <p>Want</p>
+                <input type="number" id="nb1" min="0">
+                <p>:</p>
+                <input type="number" id="nb2" min="0">
+                <p>Have</p>
+            </div>
+            <label>Selling ratio</label>
+            <div class="inline">
+                <p>Have</p>
+                <input type="number" id="nb3" min="0">
+                <p>:</p>
+                <input type="number" id="nb4" min="0">
+                <p>Want</p>
+            </div>
+        </div>
+    </form>
+
+    <button id="submit">Calculate</button>
+
+    <section id="guide_section">
+        <div class="c_form">
+            <form>
+                <label>The amount you have</label>
+                <input type="number" id="sum" min="0">
+                <p id="amount">The amount you should trade :</p>
+                <p id="pcs">Against :</p>
+                <label>Then</label>
+                <p id="pcs2">Sell :</p>
+                <p id="amount2">For :</p>
+                <label id="earning">Earning :</label>
+            </form>
+    
+            <!-- faire un graphique des intérêts composés pour les 10 prochains trades -->
+            <button id="submit2">Get advices</button>
+        </div>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
