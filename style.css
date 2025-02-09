@@ -20,8 +20,6 @@ body{
 }
 
 header{
-    height: 90px;
-    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,14 +31,12 @@ header{
 }
 
     header > p{
-        margin: 15px;
         position: absolute;
         top: 0;
         left: 0;
     }
 
 h2{
-    font-size: 30px;
     color: var(--verified-color);
     transition: 0.2s;
 }
@@ -58,12 +54,7 @@ h2{
 }
 
 .object_card{
-    margin: 25px;
-    padding: 30px;
-    min-width: 430px;
-    width: 500px;
     max-width: calc(80vw - 2*30px);
-    border-radius: 15px;
     background-color: var(--second-bg-color);
     transition: box-shadow 0.5s;
 }
@@ -103,36 +94,6 @@ input{
     border-radius: 5px;
 }
 
-button{
-    padding: 8px 24px;
-    font-size: 16px;
-    color: var(--p-color);
-    background-color: var(--third-bg-color);
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    transition: background 0.2s;
-}
-
-button:hover{
-    cursor: pointer;
-    background-color: var(--second-bg-color);
-}
-
-#submit{
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-}
-
-#submit2{
-    position: relative;
-    /* margin: 50px;
-    position: sticky;
-    top: 100px;
-    left: 100%; */
-}
-
 #guide_section{
     padding-top: 90px; /* taille du header */
     height: 100vh;
@@ -145,36 +106,240 @@ button:hover{
     transition: opacity 0.5s;
 }
 
-    .c_form{
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* background-color: aqua; */
-        justify-content: space-between;
-    }
-
-    .c_form > form{
-        position: relative;
-    }
-
-    .c_form > form > p {
-        margin: 40px 5px;
-    }
-
-    .c_form > form > label {
-        color: var(--verified-color);
-    }
-
     #earning{
         padding: 15px 0;
         border-top: 1px solid var(--verified-color);
     }
 
     canvas{
-        margin: 100px 0;
-        max-width: 90vw;
         position: relative;
         left: 50%;
         transform: translate(-50%);
     }
+
+@media (orientation: landscape) {
+    header{
+        height: 90px;
+        width: 100vw;
+    }
+    
+        header > p{
+            margin: 2vh;
+        }
+    
+    h2{
+        font-size: 30px;
+    }
+    
+    .object_card{
+        margin: 25px;
+        padding: 30px;
+        min-width: 430px;
+        width: 500px;
+        max-width: calc(80vw - 2*30px);
+        border-radius: 15px;
+        background-color: var(--second-bg-color);
+        transition: box-shadow 0.5s;
+    }
+    
+        #form1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centre le form */
+        }
+    
+    label{
+        font-size: 18px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+    
+    input{
+        margin: 40px 5px;
+        padding: 6px 2px;
+        font-size: 16px;
+        color: var(--p-color);
+        background-color: var(--third-bg-color);
+        border: none;
+        border-radius: 5px;
+    }
+    
+    button{
+        padding: 16px 48px;
+        font-size: 16px;
+        color: var(--p-color);
+        background-color: var(--third-bg-color);
+        border: none;
+        border-radius: 16px;
+        outline: none;
+        transition: background 0.2s;
+    }
+    
+    button:hover{
+        cursor: pointer;
+        background-color: var(--second-bg-color);
+    }
+    
+    #submit{
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+    }
+    
+    #submit2{
+        position: relative;
+        top: 20px;
+    }
+    
+    #guide_section{
+        padding: 90px 0; /* taille du header */
+        min-height: 100vh;
+        width: 100vw;
+        display: none;
+    }
+    
+        .c_form{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: aqua; */
+            justify-content: space-between;
+        }
+    
+        .c_form > form > p {
+            margin: 40px 5px;
+        }
+    
+        .c_form > form > label {
+            color: var(--verified-color);
+        }
+    
+        #earning{
+            padding: 15px 0;
+            border-top: 1px solid var(--verified-color);
+        }
+    
+        canvas{
+            margin: 100px 0;
+        }
+}
+
+@media (orientation: portrait) {
+    header{
+        height: 75px;
+        width: 100vw;
+    }
+    
+        header > p{
+            margin: 1vh;
+        }
+    
+    h2{
+        font-size: 20px;
+    }
+    
+    .object_card{
+        padding: 30px;
+        width: 95vw;
+        max-width: calc(80vw - 2*30px);
+        border-radius: 15px;
+        background-color: var(--second-bg-color);
+        transition: box-shadow 0.5s;
+    }
+    
+        #form1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centre le form */
+        }
+    
+    label{
+        font-size: 14px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    
+    input{
+        margin: 30px 2vw;
+        padding: 6px 5px;
+        width: calc(20vw - 2*5px);
+        font-size: 12px;
+        color: var(--p-color);
+        background-color: var(--third-bg-color);
+        border: none;
+        border-radius: 5px;
+    }
+    
+    button{
+        padding: 8px 24px;
+        font-size: 16px;
+        color: var(--p-color);
+        background-color: var(--third-bg-color);
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        transition: background 0.2s;
+    }
+    
+    button:hover{
+        cursor: pointer;
+        background-color: var(--second-bg-color);
+    }
+    
+    #submit{
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+    }
+    
+    #submit2{
+        position: relative;
+        top: 20px;
+    }
+    
+    #guide_section{
+        padding: 75px 0; /* taille du header */
+        min-height: 100vh;
+        width: 100vw;
+        display: none;
+    }
+    
+        .c_form{
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: aqua; */
+            justify-content: space-between;
+        }
+    
+        .c_form > form > p {
+            margin: 30px 5px;
+        }
+    
+        .c_form > form > label {
+            color: var(--verified-color);
+        }
+    
+        #earning{
+            padding: 15px 0;
+            border-top: 1px solid var(--verified-color);
+        }
+    
+        canvas{
+            margin: 100px 0;
+        }
+}
